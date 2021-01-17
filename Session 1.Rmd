@@ -1,0 +1,137 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+Installing Packages
+```{r}
+install.packages('plotrix')
+```
+
+Printing Stuff
+```{r}
+print("Hello World!")
+```
+
+More Printing
+```{r}
+myStatement <- "This is a variable statement."
+
+print(myStatement)
+```
+
+Writing Comments
+```{r}
+# This is a single line comment !
+```
+
+More Comments
+```{r}
+" This can be used as a multi-line comment. This is the next line. "
+```
+
+Basic Data Types in R
+
+1. Logical
+
+TRUE & FALSE
+
+```{r}
+true.value <- TRUE
+
+print(class(true.value))
+
+if(true.value) {
+  print("The condition was true.")
+}
+```
+
+```{r}
+false.value <- FALSE
+
+print(class(false.value))
+
+if(false.value) {
+  print("The condition was false.")
+} else {
+  print("Not true.")
+}
+```
+
+2. Numeric Data Type
+
+```{r}
+x <- 23.5
+y <- 45
+
+print(class(x))
+print(class(y))
+```
+
+Integers
+
+```{r}
+this.int <- 34L
+new.int <- 90L
+
+print(class(this.int))
+print(class(new.int))
+```
+
+Complex Numbers
+
+```{r}
+this.complex <- 3 + 4i
+new.complex <- 50 + 23i
+
+print(class(this.complex))
+print(class(new.complex))
+```
+
+Characters
+
+```{r}
+myString <- "Hello Everyone"
+newCharacter <- 't'
+
+print(class(myString))
+print(class(newCharacter))
+```
+
+Vectors 
+
+```{r}
+myVector <- c(23, 45, 67, 89)
+newVector <- c("apple", "banana", "orange", "grapes")
+
+print(myVector)
+print(newVector)
+
+print(class(myVector))
+print(class(newVector))
+```
+
+```{r}
+thisVector <- c("apple", TRUE, 45)
+print(thisVector)
+print(class(thisVector))
+```
+
+Lists
+
+```{r}
+myList <- list(c(23, 45, "Hello", c(4, 6, 7)))
+print(myList)
+print(class(myList))
+```
+
+Matrices 
+Two dimensional dataset
+```{r}
+M = matrix(c("a", "b", "c", 4, 67, 62, TRUE, "some text"), nrow = 2, ncol = 4, byrow = TRUE)
+print(M)
+```

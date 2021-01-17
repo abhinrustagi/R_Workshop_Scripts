@@ -1,0 +1,324 @@
+---
+title: "R Workshop Session 2"
+output: html_notebook
+---
+
+Mathematical Operators
+
+R is capable of performing basic mathematical operations, such as addition (+), multiplication (*), subtraction (-), division (/), quotient division (%/%), remainder division (%%), and exponentiation (^) on individual values or vectors.
+
+```{r}
+
+value1 <-  # Enter a value here
+value2 <-  # Enter another value here
+  
+result.addition <- value1 + value2
+print(result.addition)
+
+result.multiplication <- value1 * value2
+print(result.multiplication)
+
+result.division <- value1 / value2
+print(result.division)
+
+result.subtraction <- value1 - value2
+print(result.subtraction)
+
+result.quotient <- value1 %/% value2
+print(result.quotient)
+
+result.remainder <- value1 %% value2
+print(result.remainder)
+
+result.exponent <- value1 ^ value2
+print(result.exponent)
+
+```
+
+-------------------------
+
+Performing operations on vectors
+
+```{r}
+
+vector1 <- #Add values here 
+vector2 <- #Add values here
+
+result.vector.addition <- vector1 + vector2 
+print(result.vector.addition)
+
+result.vector.multiplication <- vector1 * vector2
+print(result.vector.multiplication)
+
+result.vector.division <- vector1 / vector2
+print(result.vector.division)
+
+result.vector.subtraction <- vector1 - vector2
+print(result.vector.subtraction)
+
+result.vector.quotient <- vector1 %/% vector2
+print(result.vector.quotient)
+
+result.vector.remainder <- vector1 %% vector2
+print(result.vector.remainder)
+
+result.vector.exponent <- vector1 ^ vector2
+print(result.vector.exponent)
+
+```
+
+-------------------------
+
+Relational Operators
+
+Relational Operators result in True or False.
+
+There are 6 operators 
+
+'>' : Greater than
+'<' : Lesser than
+'= =' : Equal to
+'< =' : Less than or equal to
+'> =' : Greater than or equal to
+'! =' : Not equal to
+
+```{r}
+
+print(value1 > value2)
+print(value1 < value2)
+print(value1 == value2)
+print(value1 >= value2)
+print(value1 <= value2)
+print(value1 != value2)
+
+print(vector1 > vector2)
+print(vector1 < vector2)
+print(vector1 == vector2)
+print(vector1 >= vector2)
+print(vector1 <= vector2)
+print(vector1 != vector2)
+
+```
+
+-------------------------
+
+Logical Operators
+
+There are 5 widely used logical operators
+
+'&' : Element Wise Logical AND Operator
+'&&' : Logical AND Operator (compares first element only)
+'|' : Element Wise Logical OR Operator
+'||' : Logical OR Operator (compares first element only)
+'!' : Logical NOT Operator
+
+```{r}
+
+print(value1 & value2)
+print(value1 | value2)
+print(!value1)
+
+print(vector1 & vector2)
+print(vector1 | vector2)
+print(vector1 || vector2)
+print(vector1 && vector2)
+print(!vector2)
+
+```
+
+-------------------------
+
+Assignment Operators
+
+Most widely used assignment operator is '< -', but there are few more operators:
+
+'< -', '<< -", "=" called Left Hand Assignment
+'- >', '- >>' called Right Hand Assignment
+
+-------------------------
+
+Other Operators
+
+':' Creates a vector or series of numbers starting from the value on its left to the value on its right.
+
+'%in%' checks if a value is in a vector/list/matrix
+
+'%*%' Multiplies two matrices
+
+```{r}
+
+series.vector <- # Create a series
+
+check_value <-  # Enter any value
+  
+print(check_value %in% series.vector)
+
+test.matrix <- # Create a matrix
+
+# Multiply this matrix by its transpose. To transpose a matrix M, we use the function t(M).
+transpose_product <- 
+print(transpose_product)
+  
+```
+
+WAP which multiplies a 4x5 matrix with its transpose.
+
+-------------------------
+
+Printing
+
+print() function can print only one argument at once. To print multiple arguments, we use the cat() function.
+
+```{r}
+
+cat(value1, value2)
+
+# This will return an error
+print(value1, value2)
+
+```
+
+-------------------------
+
+Data type of a variable
+
+We use the class() function to check the data type of a variable.
+
+-------------------------
+
+Selecting Elements from a vector.
+
+```{r}
+
+# Printing first value in vector1.
+print(vector1[1])
+
+# Print all elements but the first element from vector1.
+print(vector1[-1])
+
+# Print elements 2 to 4 from vector1
+print(vector1[2:4])
+
+# Print all elements except 2 to 4 from vector1.
+print(vector1[-(2:4)])
+
+# Print Elements 1 and 3
+print(vector1[c(1,3)])
+
+# Print all elements which are equal to 10.
+print(vector1[vector1 == 10])
+
+# Print all elements less than 10
+print(vector1[vector1 < 10])
+
+# Print elements in a particular set
+print(vector1[vector1 %in% c(3, 4, 10)])
+
+```
+
+-------------------------
+
+Selecting Elements from Matrix
+
+```{r}
+
+M <- #create a 4x4 matrix
+  
+# Selecting a row
+
+#First row
+M[1, ]
+
+#First Column
+M[ ,1]
+
+#Selecting an element
+M[1,1]
+
+# Solve a matrix equation
+
+N <- #create another 4x3 matrix
+# Solve MX = N for X
+solve(M, N)
+
+```
+
+-------------------------
+
+Conditional Statements
+
+We use if, if-else-if or switch for conditional processes.
+
+```{r}
+
+if (value1 > value2) {
+  cat(value1, " is greater than ", value2)
+}
+
+#If there is no output, it means value2 is greater than value1
+
+```
+
+```{r}
+
+if (value1 > value2) {
+  print("Still not greater.")
+} else {
+  print("The else block was executed here.")
+}
+
+```
+
+```{r}
+
+# Enter any weather type out of "Sunny", "Rainy", "Cold"
+weather <- 
+
+if (weather == "Sunny") {
+  print("It is sunny out.")
+} else if (weather == "Rainy") {
+  print("It is raining")
+} else {
+  print("It is cold.")
+}
+
+```
+
+```{r}
+
+rollno <- 2
+
+switch(3, "First", "Second", "Third", "Fourth")
+
+value <- "34"
+
+switch(value, "34"=print("The value is 34"), "46"=print("The value is 46"))
+
+```
+
+-------------------------
+
+Q - WAP to check if temperature is above 25 degrees celcius. If it is above 25, print "It is mild.", else print "It is cold".
+
+Q - WAP using a switch statement to print the day of the week.
+
+Q - WAP which checks if the 5th value of a vector is greater than 10.
+
+-------------------------
+
+Other Stuff
+
+'?function_name' to pull up the documentation of a function.
+
+help.search('term') to search for any function with term in it.
+
+help(package = 'package_name') to search for documentation of any package.
+
+install.packages('package_name') to install a package.
+
+library('package_name') to load package into the session.
+
+package_name::function_name to use a particular function from a package.
+
+data() shows all the available datasets in R.
+data(dataset_name) to load a dataset into session.
