@@ -114,15 +114,23 @@ There are 5 widely used logical operators
 
 ```{r}
 
-print(value1 & value2)
-print(value1 | value2)
-print(!value1)
+#print(value1 & value2)
+#print(value1 | value2)
+#print(!value1)
 
-print(vector1 & vector2)
-print(vector1 | vector2)
-print(vector1 || vector2)
-print(vector1 && vector2)
-print(!vector2)
+print(TRUE & FALSE)
+print(TRUE & TRUE)
+print(FALSE & FALSE)
+
+print(TRUE | TRUE)
+print(TRUE | FALSE)
+print(FALSE | FALSE)
+
+#print(vector1 & vector2)
+#print(vector1 | vector2)
+#print(vector1 || vector2)
+#print(vector1 && vector2)
+#print(!vector2)
 
 ```
 
@@ -144,6 +152,28 @@ Other Operators
 '%in%' checks if a value is in a vector/list/matrix
 
 '%*%' Multiplies two matrices
+```{r}
+
+print(1:4)
+
+1 %in% 1:4
+
+```
+```{r}
+
+a <- 4
+
+A <- 5
+
+Economics
+economics
+
+print(a)
+print(A)
+
+```
+
+
 
 ```{r}
 
@@ -162,6 +192,10 @@ print(transpose_product)
 ```
 
 WAP which multiplies a 4x5 matrix with its transpose.
+
+```{r}
+
+```
 
 -------------------------
 
@@ -189,6 +223,8 @@ We use the class() function to check the data type of a variable.
 Selecting Elements from a vector.
 
 ```{r}
+
+vector1 <- c(3, 6, 8, 10, 15, 20, 21)
 
 # Printing first value in vector1.
 print(vector1[1])
@@ -306,19 +342,4 @@ Q - WAP which checks if the 5th value of a vector is greater than 10.
 
 -------------------------
 
-Other Stuff
 
-'?function_name' to pull up the documentation of a function.
-
-help.search('term') to search for any function with term in it.
-
-help(package = 'package_name') to search for documentation of any package.
-
-install.packages('package_name') to install a package.
-
-library('package_name') to load package into the session.
-
-package_name::function_name to use a particular function from a package.
-
-data() shows all the available datasets in R.
-data(dataset_name) to load a dataset into session.
